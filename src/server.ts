@@ -9,15 +9,6 @@ if (!process.env.PORT) {
 
 const PORT: number = parseInt(process.env.PORT as string, 10) || 5001;
 
-app.get("/about", (req, res) => {
-  res.send({
-    Author: "Ephrem Demelash",
-    Github: "github.com/ephremdeme",
-    Email: "demelashephrem@gmail.com",
-    LinkedIn: "linkedin.com/in/ephrem-demelash/",
-  });
-});
-
 app.use(errorHandler()); //I applied it last, cause i want it to run last and handle all the unhandled errors.
 
 app.listen(PORT, () => {

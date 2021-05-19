@@ -20,6 +20,14 @@ class App {
         : process.env.LOCAL_MONGO_URL;
 
     this.config();
+    this.app.get("/about", (req, res) => {
+      res.send({
+        Author: "Ephrem Demelash",
+        Github: "github.com/ephremdeme",
+        Email: "demelashephrem@gmail.com",
+        LinkedIn: "linkedin.com/in/ephrem-demelash/",
+      });
+    });
     this.app.use("/api/employees", employeeRouter);
     this.errorRoute();
   }
