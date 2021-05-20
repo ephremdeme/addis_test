@@ -1,0 +1,13 @@
+version: "3.4"
+
+services:
+  addistest:
+    image: addistest
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      - NODE_ENV=production
+      - PORT=5001
+    ports:
+      - 5001:5001

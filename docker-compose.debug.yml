@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  addistest:
+    image: addistest
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: development
+    ports:
+      - 5001:5001
+      - 9229:9229
+    command: ["node", "--inspect=0.0.0.0:9229", "./dist/server.js"]

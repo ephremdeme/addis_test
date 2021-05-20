@@ -2,3 +2,5 @@ node_modules/
 dist/
 yarn.*
 .env
+.vscode/launch.json
+.vscode/tasks.json
